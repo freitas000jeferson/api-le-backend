@@ -1,0 +1,64 @@
+{
+  "links_uteis": [
+    "https://medium.com/@thaisdalencar/mongodb-como-relacionar-dados-3e6e8f136590",
+    "https://softwareontheroad.com/pagination-in-nodejs-mongo/",
+    "https://mongoosejs.com/docs/queries.html",
+    "https://mongoosejs.com/docs/api/query.html"
+  ],
+  "todo": {
+    "auth": ["auth/login", "auth/refresh"],
+    "users": ["POST", "DELETE", "GET", "PUT"],
+    "type_profiles": ["POST", "DELETE", "GET", "PUT"],
+    "memory_cards": [],
+    "phrases": [],
+    "posts": [],
+    "commentarys": []
+  },
+  "users": [{
+    "id": "user01",
+    "name": "fulano",
+    "avatar": "http://url-server/avatar/user01/avatar-user01.jpg",
+    "email": "fulano@email.com",
+    "password": "asa2rcvhw50992n@#@ad%",
+    "id_type_profile": "ObjectId(typeProfile01)"
+  }],
+  "type_profiles": [{
+    "id": "typeProfile01",
+    "type_profile": "ADMIN",
+    "permissions": ["CREATE-MODULE", "UPDATE-MODULE"]
+  }],
+  "memory_cards": [{
+    "id": "memorycard01",
+    "id_user": "ObjectId(user01)",
+    "word": "pendant",
+    "description":"texto em md",
+    "level": 1,
+    "date_view": "2020-11-12T10:10:10.2131231/* salvar como timestamp */",
+    "step": 2,
+    "meanings": ["pingente", "brinco"]
+  }],
+  "phrases": [{
+    "id": "phrase001",
+    "phrase": "don't use my pendant",
+    "datails": "",
+    "id_memory_card": "ObjectId(memorycard01)"
+  }],
+  "posts": [{
+    "id": "post001",
+    "title": "title",
+    "description": "string",
+    "url": "http://url-subject.html",
+    "tags": ["TAG01", "TAG02"],
+    "likes": 1,
+    "date": "2020-11-12T10:10:10.2131231/* salvar como timestamp */",
+    "id_user": "ObjectId(user01)"
+  }],
+  "commentarys": [{
+    "id": "comentary01",
+    "message": "string",
+    "date": "2020-11-12T12:11:00.2131231 /* salvar como timestamp */",
+    "likes": 2,
+    "id_post": "ObjectId(post001)",
+    "id_user": "ObjectId(user01)"
+  }]
+}
